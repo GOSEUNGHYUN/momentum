@@ -1,17 +1,18 @@
-//object
+function sayHello(nameOfPerson, age){
+    console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
+}
+
+sayHello("nico", 10);
+sayHello("dal", 23);
+sayHello("lynn", 21);
+
+
 const player = {
-    name:"nico",
-    point:10,
-    fat:true,
-};
+    name: "nico",
+    sayHello: function(otherPersonsName){
+        console.log("hello " + otherPersonsName + " nice to meet you!");
+    },
+}
 
-console.log(player);
-
-//존재하지 않는 것도 넣을 수 있다.
-player.lastName = "potato";
-
-//업데이트
-player.point = 10;
-player.point = player.point + 15;
-
-console.log(player);
+console.log(player.name);
+player.sayHello("lynn");
