@@ -1,10 +1,17 @@
-const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
-console.log(daysOfWeek);
+//object
+const player = {
+    name:"nico",
+    point:10,
+    fat:true,
+};
 
-//array에서 아이템 받아오기
-console.log(daysOfWeek[4]);
+console.log(player);
 
-//array안에 요일 더 추가하기
-daysOfWeek.push("sun");
+//존재하지 않는 것도 넣을 수 있다.
+player.lastName = "potato";
 
-console.log(daysOfWeek);
+//업데이트
+player.point = 10;
+player.point = player.point + 15;
+
+console.log(player);
