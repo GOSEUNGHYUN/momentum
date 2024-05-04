@@ -1,8 +1,22 @@
-const age = 96;
-function calculateKrAge(ageOfForeigner){
-    return ageOfForeigner + 2;
+const calculator = {
+    add : function(a,b){
+        console.log(a+b);
+    },
+    sub : function(a,b){
+        console.log(a-b);
+    },
+    div : function(a,b){
+        console.log(a/b);
+    },
+    mul : function(a,b){
+        console.log(a*b);
+    },
+    powerof : function(a){
+        console.log(a*a);
+    }
 }
 
-const krAge = calculateKrAge(age);
-
-console.log(krAge);
+calculator.add(1,1);
+calculator.div(6,2);
+calculator.mul(2,2);
+calculator.powerof(10);
