@@ -1,19 +1,22 @@
-//추가설명
-
-//object
-const person = {
-    name:"Nico",
-    age: 98,
-};
-console.log(person);
-
-person.sexy = "soon"; //object안에 새 property를 만들 수 있다.
-console.log(person);
-
-
-//function
-function plus(potato, salad){ //potato, salad는 data를 받으면 대체되는 place holder(자리표시자)일 뿐이다.
-    console.log(potato+salad);
+const calculator = {
+    add : function(a,b){
+        console.log(a+b);
+    },
+    sub : function(a,b){
+        console.log(a-b);
+    },
+    div : function(a,b){
+        console.log(a/b);
+    },
+    mul : function(a,b){
+        console.log(a*b);
+    },
+    powerof : function(a){
+        console.log(a*a);
+    }
 }
 
-plus(5,10);
+calculator.add(1,1);
+calculator.div(6,2);
+calculator.mul(2,2);
+calculator.powerof(10);
