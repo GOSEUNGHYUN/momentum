@@ -11,12 +11,12 @@ const calculator = {
     mul : function(a,b){
         console.log(a*b);
     },
-    powerof : function(a){
-        console.log(a*a);
+    powerof : function(a,b){
+        console.log(a**b);
     }
 }
 
 calculator.add(1,1);
 calculator.div(6,2);
 calculator.mul(2,2);
-calculator.powerof(10);
+calculator.powerof(2,3);
