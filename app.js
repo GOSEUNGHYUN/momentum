@@ -1,20 +1,5 @@
-const age = parseInt(prompt("How old are you?"));
+//JavaScript가 HTML에 이미 연결되어있어서 JS는 HTML에 접근하고 읽을 수 있다.
+//모든 것들은 document로부터 시작된다
+//document는 여러분의 web site를 의미한다.
 
-console.log(isNaN(age));
-//isNaN ? (NaN)true : (NotNaN)false
-
-if(isNaN(age)||age<0){
-    console.log("Please write a real positive number");
-}else if(age<18){
-    console.log("You are too young");
-}else if(age > 50 && age <=80){
-    console.log("You should exercise");
-}else if(age>80){
-    console.log("You can do whatever you want.");
-}
-
-/*
-else{
-    console.log("You can drink");
-}
-*/
+document.title = "Hello! From JS!";
