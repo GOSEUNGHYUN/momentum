@@ -1,5 +1,11 @@
-//JavaScript가 HTML에 이미 연결되어있어서 JS는 HTML에 접근하고 읽을 수 있다.
-//모든 것들은 document로부터 시작된다
-//document는 여러분의 web site를 의미한다.
+const title = document.getElementById("title");
+//getElementByID()는 HTML에서 id를 통해 element를 찾아준다.
 
-document.title = "Hello! From JS!";
+console.dir(title);
+//console.log()보다 element를 더 자세하게 보여주는 console.dir()을 사용한다.
+//<h1>title 하나에서 많은 것들을 가져올 수 있다.
+
+title.innerText = "Got you!";
+
+console.log(title.id);
+console.log(title.className);
