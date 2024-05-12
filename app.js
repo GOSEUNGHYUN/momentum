@@ -1,11 +1,15 @@
-const title = document.getElementById("title");
-//getElementByID()는 HTML에서 id를 통해 element를 찾아준다.
+/* example1, 별로 사용하지 않음
+const hellos = document.getElementsByClassName("hello");
+console.log(hellos);
+*/
 
-console.dir(title);
-//console.log()보다 element를 더 자세하게 보여주는 console.dir()을 사용한다.
-//<h1>title 하나에서 많은 것들을 가져올 수 있다.
 
-title.innerText = "Got you!";
+//querySelector() : element를 CSS방식으로 검색 할 수 있다. 하나의 element만 반환해준다.
+const title = document.querySelector(".hello h1");
+//document.querySelector(".hello h1:first-child");
+//document.querySelector("#hello"); = document.getElementById("hello");
+console.log(title);
 
-console.log(title.id);
-console.log(title.className);
+//querySelectorAll() : selector 안의 조건에 부합하는 모든 element를 가져다준다.
+const title2 = document.querySelectorAll(".hello h1");
+console.log(title2);
