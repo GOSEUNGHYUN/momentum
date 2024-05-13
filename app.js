@@ -4,12 +4,15 @@
 const h1 = document.querySelector('div.hello:first-child h1');
 
 function handleTitleClick() {
-    const clickedClass = 'clicked'; //"clicked"는 사용자가 정의한 이름이기 때문에 실수할 수 있어서 string을 변수에 넣는게좋다.
-    //clickedClass변수는 실수로 잘못 입력했을 경우, 콘솔창에 이 변수가 정의되어있지 않다고 알려준다.
-    if (h1.className === clickedClass) {
-        h1.className = '';
+    const clickedClass = 'clicked';
+
+    //전 강의 코드의 문제점 : class name 초기의 sexy-font 값이 사라진다.
+    //특정한 class name만 변경할 수 있는 방법
+    if (h1.classList.contains(clickedClass)) {
+        //clickedClass가 h1의 classList에 포함되어 있는지?
+        h1.classList.remove(clickedClass);
     } else {
-        h1.className = clickedClass;
+        h1.classList.add(clickedClass);
     }
 }
 
