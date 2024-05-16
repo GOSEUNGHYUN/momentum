@@ -6,8 +6,12 @@ const loginButton = loginForm.querySelector('button');
 // --> 두 줄로도 가능
 
 function onLoginBtnClick() {
-    //console.dir(loginInput); 어떤 property에 값이 들어 있는지 확인하는 방법
-    console.log('hello,', loginInput.value); //문제점 : 콘솔에 값을 입력하지 않아도 hello가 나온다.
+    const username = loginInput.value;
+    if (username === '') {
+        alert('Please write your name');
+    } else if (username.length > 15) {
+        alert('Your name is too long');
+    }
 }
 
 loginButton.addEventListener('click', onLoginBtnClick);
