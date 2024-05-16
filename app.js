@@ -1,7 +1,13 @@
-const h1 = document.querySelector('div.hello:first-child h1');
+const loginForm = document.querySelector('#login-form');
+const loginInput = loginForm.querySelector('input');
+const loginButton = loginForm.querySelector('button');
+// --> const loginInput = document.querySelector("#login-form input");
+// --> const loginButton = document.querySelector("#login-form button");
+// --> 두 줄로도 가능
 
-function handleTitleClick() {
-    h1.classList.toggle('clicked'); //#2.8 CSS in Javascript part Three(1)과 같은 원리의 코드
+function onLoginBtnClick() {
+    //console.dir(loginInput); 어떤 property에 값이 들어 있는지 확인하는 방법
+    console.log('hello,', loginInput.value); //문제점 : 콘솔에 값을 입력하지 않아도 hello가 나온다.
 }
 
-h1.addEventListener('click', handleTitleClick);
+loginButton.addEventListener('click', onLoginBtnClick);
